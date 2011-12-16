@@ -5,7 +5,7 @@
   * MIT License
   */
 
-(function(window) {
+(function($) {
   var EverydayHero = function(resource, id, options) {
     this.resource = resource;
     this.id       = id;
@@ -36,7 +36,7 @@
     return this;
   }
     
-  window.EverydayHero = function() {
+  $.EverydayHero = function() {
     return EverydayHero.apply(this, arguments);
   }
 })(window);
