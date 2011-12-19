@@ -51,25 +51,25 @@ Putting it all together you get something like this.
 
 ### total
 
-Signature
-: total(callback:function) 
+#### Signature
+total(callback:function) 
   
-Description
-: Donation total
+#### Description
+Donation total
 
-Resources
-: event
+#### Resources
+event
 
 ### topTen
 
-Signature
-: topTen(query:string, callback:function)
+#### Signature
+topTen(query:string, callback:function)
   
-Description
-: Top ten fundraisers sorted by individual, team or all
+#### Description
+Top ten fundraisers sorted by individual, team or all
 
-Resources
-: event, network
+#### Resources
+event, network
 
 ## Copyright
 
