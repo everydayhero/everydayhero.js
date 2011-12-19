@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://raw.github.com/ded/reqwest/60cf2a65c86cd3c93ac585d41ea5ddce7ea45c18/reqwest.min.js"></script>
+    <script type="text/javascript" src="../src/everydayhero.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        var api = new EverydayHero({
+          resource: 'network',
+          id: '2033'
+        });
+        
+        api.topTen('individual', function(fundraisers) {
+          document.getElementById('individual').innerHTML = fundraisers[0].fullname;          
+        });
+        
+        api.topTen('team', function(teams) {
+          document.getElementById('team').innerHTML = teams[0].fullname;
+        });
+      })(window);        
+    </script>
+  </head>
+  <body>
+    <div id="individual"></div>
+    <div id="team"></div>
+  </body>
+</html>

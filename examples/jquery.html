@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/everydayhero.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        var api = new EverydayHero({
+          resource: 'event',
+          id: 'febfast2012'
+        });
+        
+        $(document).ready(function() {
+          api.total(function(total) {
+            $('#total').text(total);
+          });
+          
+          api.topTen('individual', function(fundraisers) {
+            $('#individual').text(fundraisers[0].fullname);
+          });
+          
+          api.topTen('team', function(teams) {
+            $('#team').text(teams[0].fullname);
+          });
+        });        
+      })(jQuery);
+    </script>
+  </head>
+  <body>
+    <div id="total"></div>
+    <div id="individual"></div>
+    <div id="team"></div>
+  </body>
+</html>
