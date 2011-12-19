@@ -1,12 +1,19 @@
 /*!
-  * Everyday Hero JavaScript Widget API Wrapper
+  * Everyday Hero JavaScript Public Widget API Wrapper
   * https://github.com/everydayhero/everydayhero.js
+  * edh-dev@everydayhero.com.au
   * Copyright © 2011 Everyday Hero Pty. Ltd.
   * MIT License
   */
 
 (function($) {
-    
+  /* Wraps around `jQuery` or `rewest` for making JSONP requests.
+   * Expects URLs to define ':function_name' for the callback function. 
+   * Similar to jQuery's `callback=?`.
+   *
+   * Example URL: 
+   *    http://localhost/posts.json?callback=:function_name
+   */
   var XHR = function() {
     this._functionName = function() {
       return 'xhr_' + Math.floor(Math.random()*1000001);
@@ -42,6 +49,11 @@
     return this;
   }
   
+  /* Wraps around the Everyday Hero Public Widget API. Get the top ten
+   * or total for supported resources. Supported resources are `event` and
+   * `network`.
+   *
+   */
   var API = function(settings) {
     this.host     = settings.host || 'api.everydayhero.com.au';
     this.id       = settings.id;
@@ -68,7 +80,7 @@
     
     return this;
   }
-    
+   
   $.EverydayHero = function() {
     return API.apply(this, arguments);
   }
