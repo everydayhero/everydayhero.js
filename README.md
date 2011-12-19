@@ -1,6 +1,6 @@
 # Everyday Hero JavaScript Public Widget API Wrapper
 
-Quickly build giving gauges, leader boards and other widgets with minimal dependancies. See a full example using [jQuery](http://github.com/everydayhero/everydayhero.js/examples/jquery.html) and [reqwest](http://github.com/everydayhero/everydayhero.js/examples/reqwest.html).
+Quickly build giving gauges, leader boards and other widgets with minimal dependancies. See a full example using [jQuery](https://github.com/everydayhero/everydayhero.js/blob/master/examples/jquery.html) or [reqwest](https://github.com/everydayhero/everydayhero.js/blob/master/examples/reqwest.html).
 
 ## Installation
 
@@ -43,11 +43,21 @@ Putting it all together you get something like this.
 })(jQuery);
 ```
 
+## Dependancies
+
+[jQuery](http://jquery.com/) or [reqwest](https://github.com/ded/reqwest). Reqwest can be used as an alternative to jQuery when you really need to be light weight. We recommend reqwest for its smaller file size.
+
 ## Methods
 
 ### total
 
+| Signature                | Description    | Resources |
+| total(callback:function) | Donation total | event     |
+
 ### topTen
+
+| Signature                               | Description                                           | Resources      |
+| topTen(query:string, callback:function) | Top ten fundraisers sorted by individual, team or all | event, network |
 
 ## Copyright
 
